@@ -1,0 +1,5 @@
+.claude/
+clientes/
+*.mp4
+Thumbs.db
+.DS_Store
