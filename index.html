@@ -258,12 +258,15 @@
       top: 0; left: 0; right: 0;
       z-index: 100;
       padding: 16px 0;
-      transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.35s ease, background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
     }
     nav.scrolled {
       background: rgba(13,20,64,0.92);
       backdrop-filter: blur(20px);
       box-shadow: 0 2px 40px rgba(0,0,0,0.4);
+    }
+    nav.nav-hidden {
+      transform: translateY(-120%);
     }
     .nav-inner {
       display: flex;
@@ -2102,10 +2105,11 @@
        JAVASCRIPT
   ============================================================ -->
   <script>
-    // ---- Nav scroll effect ----
+    // ---- Nav scroll effect: esconde a barra fixa ao rolar para baixo ----
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 60);
+      navbar.classList.toggle('nav-hidden', window.scrollY > 60);
     });
 
     // ---- Mobile menu ----
