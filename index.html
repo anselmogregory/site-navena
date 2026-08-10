@@ -32,6 +32,9 @@
     })(window, document, "clarity", "script", "xo5bgu7ppp");
   </script>
   <!-- ===== Fim Microsoft Clarity ===== -->
+  <!-- ===== ChatGPT Ads Pixel (OpenAI) ===== -->
+  <script>!function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"RyVkHKnnrkN6daqxbs9DRN"});</script>
+  <!-- ===== Fim ChatGPT Ads Pixel ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -354,7 +357,7 @@
       align-items: center;
       background: linear-gradient(140deg, var(--blue-dark) 0%, var(--blue-primary) 50%, #162296 100%);
       overflow: hidden;
-      padding-top: 90px;
+      padding-top: 70px;
     }
     .hero-bg-orbs {
       position: absolute;
@@ -402,7 +405,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 56px;
       align-items: center;
-      padding: 80px 0 60px;
+      padding: 40px 0 60px;
     }
     .hero-text { width: 100%; }
     /* Founder photo column */
@@ -1350,7 +1353,8 @@
        RESPONSIVE
     ============================================================ */
     @media (max-width: 900px) {
-      .hero-content { grid-template-columns: 1fr; text-align: center; gap: 40px; }
+      #hero { padding-top: 56px; }
+      .hero-content { grid-template-columns: 1fr; text-align: center; gap: 40px; padding-top: 24px; }
       .hero-photo-col { order: 2; justify-content: center; }
       .hero-founder-wrap { max-width: 320px; margin: 0 auto; }
       .hero-champ-badge { right: -8px; font-size: 11px; padding: 8px 14px; }
@@ -2221,6 +2225,11 @@
               content_category: faturamento
             });
           }
+        }
+
+        // 3b. ChatGPT Ads Pixel — mesma regra de qualificação do Facebook
+        if (typeof oaiq === 'function' && isLeadQualificado) {
+          oaiq('measure', 'lead_created', { type: 'customer_action' });
         }
 
         // 4. Abre WhatsApp com os dados preenchidos
