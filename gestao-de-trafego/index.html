@@ -454,6 +454,20 @@
           </select>
         </div>
         <div class="form-field">
+          <label class="form-label">Qual o faturamento médio mensal do seu negócio?</label>
+          <select name="faturamento" class="form-input" required>
+            <option value="" disabled selected>Selecione o faturamento</option>
+            <option>Ainda não faturando</option>
+            <option>Até R$ 5.000 / mês</option>
+            <option>R$ 5.000 a R$ 10.000 / mês</option>
+            <option>R$ 10.000 a R$ 30.000 / mês</option>
+            <option>R$ 30.000 a R$ 50.000 / mês</option>
+            <option>R$ 50.000 a R$ 100.000 / mês</option>
+            <option>R$ 100.000 a R$ 300.000 / mês</option>
+            <option>Acima de R$ 300.000 / mês</option>
+          </select>
+        </div>
+        <div class="form-field">
           <label class="form-label">Quanto investe hoje em tráfego pago</label>
           <select name="investimento" class="form-input" required>
             <option value="" disabled selected>Selecione o investimento</option>
@@ -508,7 +522,6 @@
     });
 
     // ---- Envio do formulário: planilha + WhatsApp + evento do pixel ----
-    // Reaproveita a mesma planilha de leads já usada no site principal.
     var SHEETS_ENDPOINT = 'https://script.google.com/macros/s/AKfycbxo7dzgW1uWWVY1BPXaqIAT8FjgowMoTbs_8fXk6nEYeY5D8i6ChHb3buU92X17137tCg/exec';
 
     document.getElementById('leadForm').addEventListener('submit', function (e) {
@@ -519,12 +532,14 @@
       var instagram = this.instagram.value.trim();
       var segmentoEl = this.segmento;
       var segmento = segmentoEl.options[segmentoEl.selectedIndex].text;
+      var faturamentoEl = this.faturamento;
+      var faturamento = faturamentoEl.options[faturamentoEl.selectedIndex].text;
       var investimentoEl = this.investimento;
       var investimento = investimentoEl.options[investimentoEl.selectedIndex].text;
 
       var payload = {
         nome: nome, whatsapp: whatsapp, email: email, instagram: instagram,
-        segmento: segmento, investimento: investimento,
+        segmento: segmento, faturamento: faturamento, investimento: investimento,
         origem: 'gestao-de-trafego',
         data: new Date().toLocaleString('pt-BR')
       };
