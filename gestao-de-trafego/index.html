@@ -94,6 +94,44 @@
     }
     .btn-cta:hover { background: var(--blue-dark); }
 
+    /* Moldura com luz percorrendo a borda — chama atenção sem esconder texto */
+    .btn-cta-wrap {
+      position: relative;
+      display: inline-block;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 100%;
+      max-width: 360px;
+    }
+    .btn-cta-wrap.full { width: 100%; max-width: none; }
+    .btn-cta-wrap::before,
+    .btn-cta-wrap::after {
+      content: '';
+      position: absolute;
+      width: 55%;
+      height: 3px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .btn-cta-wrap::before {
+      top: 0; left: 0;
+      background: linear-gradient(to right, transparent 0%, var(--blue-light) 25%, #ffffff 50%, var(--blue-light) 75%, transparent 100%);
+      animation: sweep-right 2.4s ease-in-out infinite;
+    }
+    .btn-cta-wrap::after {
+      bottom: 0; right: 0;
+      background: linear-gradient(to left, transparent 0%, var(--blue-light) 25%, #ffffff 50%, var(--blue-light) 75%, transparent 100%);
+      animation: sweep-left 2.4s ease-in-out infinite;
+    }
+    @keyframes sweep-right {
+      0%   { transform: translateX(-160%); }
+      100% { transform: translateX(260%); }
+    }
+    @keyframes sweep-left {
+      0%   { transform: translateX(160%); }
+      100% { transform: translateX(-260%); }
+    }
+
     /* ===== Header ===== */
     header {
       border-bottom: 1px solid var(--border);
@@ -107,6 +145,7 @@
     }
     .header-logo { height: 40px; object-fit: contain; }
     .header-inner .btn-cta { width: auto; padding: 12px 22px; font-size: 13px; max-width: none; }
+    .header-inner .btn-cta-wrap { width: auto; max-width: none; }
 
     /* ===== Hero ===== */
     #hero { padding: 56px 0 48px; text-align: center; }
@@ -214,7 +253,7 @@
   <header>
     <div class="container header-inner">
       <img src="../Identidade visual .jpg" alt="Agência Navena" class="header-logo" />
-      <a href="https://wa.me/message/LFOIGMCL7LBZO1" target="_blank" class="btn-cta">Falar no WhatsApp</a>
+      <span class="btn-cta-wrap"><a href="https://wa.me/message/LFOIGMCL7LBZO1" target="_blank" class="btn-cta">Falar no WhatsApp</a></span>
     </div>
   </header>
 
@@ -225,7 +264,7 @@
     <div class="container">
       <h1>Gestão de tráfego pago para pequenas e médias empresas</h1>
       <p>Cuido da estruturação, da criação e da otimização diária das suas campanhas no Meta Ads e no Google Ads, com relatório semanal e reunião mensal de resultados.</p>
-      <a href="https://wa.me/message/LFOIGMCL7LBZO1" target="_blank" class="btn-cta">Falar comigo no WhatsApp</a>
+      <span class="btn-cta-wrap"><a href="https://wa.me/message/LFOIGMCL7LBZO1" target="_blank" class="btn-cta">Falar comigo no WhatsApp</a></span>
     </div>
   </section>
 
@@ -427,7 +466,7 @@
             <option>Acima de R$ 50.000</option>
           </select>
         </div>
-        <button type="submit" class="btn-cta" style="max-width:none;">Quero falar com a Navena</button>
+        <span class="btn-cta-wrap full"><button type="submit" class="btn-cta" style="max-width:none;">Quero falar com a Navena</button></span>
         <p class="form-note">Seus dados não são compartilhados com terceiros.</p>
       </form>
     </div>
