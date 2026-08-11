@@ -2187,6 +2187,7 @@
         const isLeadQualificado = investimentoEl.selectedIndex >= 3 && faturamentoEl.selectedIndex >= 4;
 
         const payload = { nome, whatsapp, email, instagram, segmento, faturamento, investimento,
+          origem: 'GPT',
           data: new Date().toLocaleString('pt-BR') };
 
         // 1. Google Sheets (fire-and-forget)
