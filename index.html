@@ -2233,7 +2233,7 @@
           oaiq('measure', 'lead_created', { type: 'customer_action' });
         }
 
-        // 4. Abre WhatsApp com os dados preenchidos
+        // 4. Abre WhatsApp com os dados preenchidos (aba nova)
         const msg =
           `Olá! Vim pelo site da Navena e quero saber um pouco mais sobre os serviços!\n\n` +
           `*Nome:* ${nome}\n` +
@@ -2244,6 +2244,9 @@
           `*Faturamento mensal:* ${faturamento}\n` +
           `*Investimento em tráfego:* ${investimento}`;
         window.open(`https://wa.me/5521990023321?text=${encodeURIComponent(msg)}`, '_blank');
+
+        // 5. Redireciona esta aba para a página de obrigado (URL usada para eventos personalizados)
+        setTimeout(function() { window.location.href = '/obrigado/'; }, 600);
       });
     }
   </script>
