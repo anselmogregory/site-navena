@@ -844,333 +844,6 @@
     }
 
     /* ============================================================
-       SECTION 5: MENTORIA SUBIDO PRO
-    ============================================================ */
-    #mentoria {
-      background: var(--blue-dark);
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    #mentoria::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    #mentoria::after {
-      content: '';
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-    }
-    .mentoria-glow {
-      position: absolute;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle, rgba(212,168,67,0.08) 0%, transparent 70%);
-      top: 50%; left: 50%;
-      transform: translate(-50%,-50%);
-      pointer-events: none;
-    }
-    .mentoria-inner {
-      position: relative;
-      z-index: 2;
-    }
-    .mentoria-header { text-align: center; margin-bottom: 64px; }
-    .champion-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: linear-gradient(135deg, rgba(212,168,67,0.2), rgba(245,200,66,0.1));
-      border: 1px solid rgba(212,168,67,0.45);
-      border-radius: 50px;
-      padding: 10px 24px;
-      margin-bottom: 24px;
-    }
-    .champion-badge span {
-      font-family: 'Poppins', sans-serif;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--gold-light);
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-    .mentoria-h2 {
-      font-size: clamp(28px, 4vw, 52px);
-      font-weight: 900;
-      color: var(--white);
-      margin-bottom: 20px;
-    }
-    .mentoria-h2 span {
-      background: linear-gradient(90deg, var(--gold), var(--gold-light));
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .mentoria-desc {
-      font-size: 18px;
-      color: rgba(255,255,255,0.7);
-      max-width: 680px;
-      margin: 0 auto 48px;
-      line-height: 1.75;
-    }
-    .mentoria-desc strong { color: var(--cream); }
-    /* Certificates */
-    .certs-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      max-width: 900px;
-      margin: 0 auto 48px;
-    }
-    .cert-card {
-      position: relative;
-      border-radius: var(--radius-lg);
-      overflow: hidden;
-      border: 2px solid rgba(212,168,67,0.3);
-      box-shadow: 0 0 40px rgba(212,168,67,0.12), var(--shadow-card);
-      transition: all 0.35s ease;
-    }
-    .cert-card:hover {
-      transform: translateY(-6px) scale(1.02);
-      border-color: rgba(212,168,67,0.6);
-      box-shadow: 0 0 60px rgba(212,168,67,0.2), var(--shadow-card);
-    }
-    .cert-card img {
-      width: 100%;
-      height: 280px;
-      object-fit: cover;
-      object-position: center top;
-    }
-    .cert-label {
-      position: absolute;
-      bottom: 0; left: 0; right: 0;
-      background: linear-gradient(to top, rgba(13,20,64,0.95), transparent);
-      padding: 20px 20px 16px;
-      color: var(--white);
-      font-size: 13px;
-      font-weight: 700;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .cert-label svg { width: 18px; color: var(--gold); }
-    .mentoria-note {
-      text-align: center;
-      max-width: 660px;
-      margin: 0 auto;
-      background: rgba(212,168,67,0.08);
-      border: 1px solid rgba(212,168,67,0.2);
-      border-radius: var(--radius-lg);
-      padding: 28px 36px;
-    }
-    .mentoria-note p {
-      color: rgba(255,255,255,0.75);
-      font-size: 15px;
-      line-height: 1.75;
-    }
-    .mentoria-note strong { color: var(--gold-light); }
-
-    /* ============================================================
-       SECTION 6: ABOUT / FOUNDER
-    ============================================================ */
-    #about {
-      background: var(--white);
-      padding: 100px 0;
-    }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 72px;
-      align-items: center;
-    }
-    .about-photo-wrap {
-      position: relative;
-    }
-    .about-photo-bg {
-      position: absolute;
-      inset: -16px;
-      background: linear-gradient(135deg, var(--blue-primary), var(--blue-light));
-      border-radius: 28px;
-      opacity: 0.12;
-      transform: rotate(3deg);
-    }
-    .about-photo {
-      position: relative;
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: 0 20px 60px rgba(13,20,64,0.2);
-      border: 3px solid rgba(30,47,187,0.15);
-    }
-    .about-photo img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-      object-position: top center;
-    }
-    .about-photo-badge {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      background: var(--blue-dark);
-      border: 1px solid rgba(91,117,255,0.4);
-      border-radius: var(--radius-md);
-      padding: 14px 18px;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .about-photo-badge img {
-      width: 40px; height: 40px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-    .about-photo-badge .badge-text span {
-      display: block;
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--white);
-    }
-    .about-photo-badge .badge-text small {
-      font-size: 11px;
-      color: rgba(255,255,255,0.5);
-    }
-    .about-text {}
-    .about-h2 {
-      font-size: clamp(28px, 3.5vw, 44px);
-      font-weight: 800;
-      color: var(--text-dark);
-      margin-bottom: 20px;
-      line-height: 1.15;
-    }
-    .about-h2 span { color: var(--blue-primary); }
-    .about-desc {
-      color: var(--text-muted);
-      font-size: 16px;
-      line-height: 1.8;
-      margin-bottom: 32px;
-    }
-    .about-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 36px;
-    }
-    .tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      background: rgba(30,47,187,0.08);
-      border: 1px solid rgba(30,47,187,0.18);
-      color: var(--blue-primary);
-      font-size: 12px;
-      font-weight: 700;
-      padding: 7px 14px;
-      border-radius: 50px;
-    }
-    .tag svg { width: 14px; }
-    .tag.gold-tag {
-      background: rgba(212,168,67,0.1);
-      border-color: rgba(212,168,67,0.3);
-      color: #A07820;
-    }
-    .about-mission {
-      background: linear-gradient(135deg, var(--blue-dark), var(--blue-primary));
-      border-radius: var(--radius-lg);
-      padding: 28px 32px;
-      color: var(--white);
-    }
-    .about-mission h4 {
-      font-size: 14px;
-      font-weight: 700;
-      color: var(--cream);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-    .about-mission p {
-      font-size: 15px;
-      line-height: 1.7;
-      opacity: 0.85;
-    }
-
-    /* ============================================================
-       SECTION 7: RESULTS
-    ============================================================ */
-    #results {
-      background: linear-gradient(140deg, var(--blue-primary) 0%, var(--blue-light) 100%);
-      padding: 100px 0;
-      position: relative;
-      overflow: hidden;
-    }
-    #results::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-      background-size: 40px 40px;
-    }
-    .results-header { text-align: center; margin-bottom: 64px; }
-    .results-h2 {
-      font-size: clamp(28px, 4vw, 48px);
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 16px;
-    }
-    .results-sub {
-      color: rgba(255,255,255,0.75);
-      font-size: 17px;
-      max-width: 480px;
-      margin: 0 auto;
-    }
-    .results-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 24px;
-      position: relative;
-      margin-bottom: 64px;
-    }
-    .result-card {
-      text-align: center;
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: var(--radius-lg);
-      padding: 40px 24px;
-      backdrop-filter: blur(20px);
-    }
-    .result-num {
-      font-family: 'Poppins', sans-serif;
-      font-size: clamp(36px, 5vw, 56px);
-      font-weight: 900;
-      color: var(--white);
-      line-height: 1;
-      margin-bottom: 8px;
-    }
-    .result-num sup {
-      font-size: 0.5em;
-      vertical-align: super;
-    }
-    .result-label {
-      font-size: 13px;
-      color: rgba(255,255,255,0.7);
-      font-weight: 500;
-      letter-spacing: 0.05em;
-    }
-    /* Placeholder note */
-    .results-placeholder-note {
-      text-align: center;
-      color: rgba(255,255,255,0.5);
-      font-size: 12px;
-      font-style: italic;
-      display: none;
-    }
-
-
-    /* ============================================================
        SECTION: CLIENTES QUE CONFIARAM
     ============================================================ */
     #clientes {
@@ -1361,10 +1034,6 @@
       .hero-ctas { justify-content: center; }
       .hero-trust { justify-content: center; }
       .hero-sub { margin-left: auto; margin-right: auto; }
-      .about-grid { grid-template-columns: 1fr; }
-      .about-photo img { height: 380px; }
-      .results-grid { grid-template-columns: repeat(2, 1fr); }
-      .certs-row { grid-template-columns: 1fr; }
       .footer-top { grid-template-columns: 1fr; gap: 32px; }
       .nav-links { display: none; }
       .hamburger { display: flex; }
@@ -1372,7 +1041,6 @@
     }
     @media (max-width: 560px) {
       .auth-inner { gap: 24px; }
-      .results-grid { grid-template-columns: repeat(2, 1fr); }
       .pain-grid { grid-template-columns: 1fr; }
       .final-cta-actions { flex-direction: column; align-items: center; }
       .hero-ctas { flex-direction: column; align-items: center; }
@@ -1434,10 +1102,9 @@
       <img src="Identidade visual .jpg" alt="Agência Navena" class="nav-logo" />
       <ul class="nav-links">
         <li><a href="#services">Serviços</a></li>
-        <li><a href="#mentoria">Mentoria</a></li>
         <li><a href="#clientes">Clientes</a></li>
-        <li><a href="#about">Quem Somos</a></li>
-        <li><a href="#contato" class="nav-cta">Falar no WhatsApp</a></li>
+        <li><a href="#contato">Contato</a></li>
+        <li><a href="https://wa.me/5521990023321" target="_blank" class="nav-cta">Falar no WhatsApp</a></li>
       </ul>
       <button class="hamburger" id="hamburgerBtn" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -1449,11 +1116,9 @@
   <div class="mobile-menu" id="mobileMenu">
     <button class="mobile-close" id="mobileClose">×</button>
     <a href="#services" onclick="closeMobileMenu()">Serviços</a>
-    <a href="#mentoria" onclick="closeMobileMenu()">Mentoria</a>
     <a href="#clientes" onclick="closeMobileMenu()">Clientes</a>
-    <a href="#about" onclick="closeMobileMenu()">Quem Somos</a>
-    <a href="#results" onclick="closeMobileMenu()">Resultados</a>
-    <a href="#contato" onclick="closeMobileMenu()" class="btn btn-whatsapp" style="font-size:15px;padding:14px 32px;">Falar no WhatsApp</a>
+    <a href="#contato" onclick="closeMobileMenu()">Contato</a>
+    <a href="https://wa.me/5521990023321" target="_blank" class="btn btn-whatsapp" style="font-size:15px;padding:14px 32px;">Falar no WhatsApp</a>
   </div>
 
   <!-- ============================================================
@@ -1488,9 +1153,9 @@
                 <span>Avaliação 5 estrelas</span>
               </div>
             </div>
-            <a href="#services" class="btn btn-outline">
-              Ver Serviços
-              <svg viewBox="0 0 20 20" fill="currentColor" style="width:16px"><path fill-rule="evenodd" d="M16.707 10.293a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 011.414-1.414l6 6z" clip-rule="evenodd"/></svg>
+            <a href="https://wa.me/5521990023321?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Navena%20e%20quero%20falar%20agora%20sobre%20tr%C3%A1fego%20pago." target="_blank" class="btn btn-outline">
+              <svg viewBox="0 0 24 24" fill="currentColor" style="width:18px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.136.564 4.14 1.549 5.873L.057 23.985l6.263-1.639A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.834 9.834 0 01-5.028-1.377l-.36-.214-3.73.977.998-3.644-.234-.374A9.789 9.789 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+              Falar agora no WhatsApp
             </a>
           </div>
           <div class="hero-trust">
@@ -1616,25 +1281,6 @@
           <h3>Sem tempo para gerir</h3>
           <p>Você é empresário, não gestor de tráfego. Ficar no detalhe das campanhas te tira o foco do que realmente importa.</p>
         </div>
-        <div class="pain-card aos aos-delay-4">
-          <div class="pain-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
-          </div>
-          <h3>Equipe interna cara</h3>
-          <p>Manter designers, gestores e copywriters internos custa uma fortuna. Com a Navena você tem tudo isso por uma fração.</p>
-        </div>
-      </div>
-      <div class="problem-resolve aos">
-        <h3>A Navena resolve tudo isso e muito mais.</h3>
-        <p>Uma assessoria completa para o seu negócio crescer de forma previsível e consistente.</p>
-        <div class="cta-block">
-          <div class="btn-green-wrap"><a href="#contato" class="btn-green">QUERO ATRAIR MAIS CLIENTES</a></div>
-          <div class="google-trust">
-            <svg viewBox="0 0 24 24" width="22" height="22" xmlns="http://www.w3.org/2000/svg"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
-            <span class="stars">★★★★★</span>
-            <span>Avaliação 5 estrelas</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -1646,7 +1292,7 @@
     <div class="container">
       <div class="services-header aos">
         <div class="section-tag">O que entregamos</div>
-        <h2 class="services-h2">Assessoria Completa para<br /><span>Escalar Seu Negócio</span></h2>
+        <h2 class="services-h2">A Navena Resolve com uma<br /><span>Assessoria Completa</span></h2>
         <p class="services-sub">Da estratégia à execução: tudo que seu negócio precisa para crescer online, em um só lugar.</p>
       </div>
       <div class="services-grid">
@@ -1743,149 +1389,6 @@
       </div>
     </div>
   </section>
-
-  <!-- ============================================================
-       SECTION 5: MENTORIA SUBIDO PRO
-  ============================================================ -->
-  <section id="mentoria">
-    <div class="mentoria-glow"></div>
-    <div class="container mentoria-inner">
-      <div class="mentoria-header aos">
-        <div class="champion-badge">
-          <span>🏆 Campeão</span>
-        </div>
-        <h2 class="mentoria-h2">
-          Formado pela Maior<br />
-          <span>Mentoria de Tráfego Pago</span><br />
-          do Brasil
-        </h2>
-        <p class="mentoria-desc">
-          Grégory Anselmo é aluno campeão da <strong>Mentoria Subido PRO</strong>, criada por <strong>Pedro Sobral</strong>, a maior autoridade em tráfego pago no Brasil, com milhares de alunos e casos de sucesso comprovados.
-        </p>
-      </div>
-      <!-- Foto com troféu -->
-      <div class="trofeu-wrap aos" style="max-width:520px;margin:0 auto 48px;border-radius:24px;overflow:hidden;border:3px solid rgba(212,168,67,0.5);box-shadow:0 0 60px rgba(212,168,67,0.2);">
-        <img src="foto-trofeu.jpeg" alt="Grégory Anselmo segurando o troféu do Campeonato Subido PRO" style="width:100%;display:block;object-fit:cover;max-height:480px;object-position:center top;" />
-      </div>
-
-      <div class="certs-row aos">
-        <div class="cert-card">
-          <img src="CERTIFICADO META ADS - SUBIDO PRO.jpg" alt="Certificado Meta Ads Subido PRO" style="height:auto;max-height:none;object-fit:contain;background:#fff;" />
-          <div class="cert-label">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-            Certificado Meta Ads
-          </div>
-        </div>
-        <div class="cert-card">
-          <img src="CERTIFICADO Google ads - SUBIDO PRO.jpg" alt="Certificado Google Ads Subido PRO" style="height:auto;max-height:none;object-fit:contain;background:#fff;" />
-          <div class="cert-label">
-            <svg viewBox="0 0 24 24" style="width:18px;height:18px;">
-              <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
-              <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
-              <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
-              <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
-            </svg>
-            Certificado Google Ads
-          </div>
-        </div>
-      </div>
-      <div class="mentoria-note aos">
-        <p>
-          Ser <strong>Subido PRO</strong> significa aplicar as estratégias mais avançadas e atualizadas do mercado de tráfego pago. Cada campanha da Navena é construída sobre esse conhecimento de elite, <strong>para que seu dinheiro trabalhe com máxima eficiência.</strong>
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       SECTION 6: ABOUT / FOUNDER
-  ============================================================ -->
-  <section id="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-photo-wrap aos">
-          <div class="about-photo-bg"></div>
-          <div class="about-photo">
-            <img src="gregory-anselmo.jpeg" alt="Grégory Anselmo, Fundador da Agência Navena" />
-          </div>
-          <div class="about-photo-badge">
-            <img src="Identidade visual  (1).jpg" alt="Navena N" style="filter:none;border-radius:50%;width:40px;height:40px;object-fit:cover;" />
-            <div class="badge-text">
-              <span>Grégory Anselmo</span>
-              <small>Fundador & Especialista em Tráfego</small>
-            </div>
-          </div>
-        </div>
-        <div class="about-text aos aos-delay-2">
-          <div class="section-tag" style="background:rgba(30,47,187,0.08);border-color:rgba(30,47,187,0.2);color:var(--blue-primary);">
-            Quem está por trás da Navena
-          </div>
-          <h2 class="about-h2">
-            Grégory Anselmo,<br />
-            <span>Especialista em Tráfego Pago</span>
-          </h2>
-          <p class="about-desc">
-            Apaixonado por resultados reais, Grégory fundou a Agência Navena com uma missão clara: fazer com que empresários brasileiros parem de desperdiçar verba em marketing sem retorno e comecem a crescer de forma previsível e consistente.
-          </p>
-          <p class="about-desc" style="margin-top:-12px;">
-            Certificado em Google Ads e Meta Ads, e campeão da mentoria Subido PRO com Pedro Sobral, o maior nome do tráfego pago no Brasil. Grégory leva para cada cliente as estratégias que realmente funcionam no mercado atual.
-          </p>
-          <div class="about-tags">
-            <span class="tag">
-              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              Especialista Meta Ads
-            </span>
-            <span class="tag">
-              <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-              Especialista Google Ads
-            </span>
-            <span class="tag gold-tag">
-              🏆 Subido PRO Certified
-            </span>
-            <span class="tag gold-tag">
-              ⭐ Pedro Sobral Alumni
-            </span>
-          </div>
-          <div class="about-mission">
-            <h4>Nossa missão</h4>
-            <p>Ser a bússola que guia negócios ao crescimento: estratégia, dados e execução impecável. Não vendemos anúncios, entregamos resultados.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============================================================
-       SECTION 7: RESULTS
-  ============================================================ -->
-  <section id="results">
-    <div class="container">
-      <div class="results-header aos">
-        <div class="section-tag">Resultados Comprovados</div>
-        <h2 class="results-h2">Números que Falam por Si Só</h2>
-        <p class="results-sub">Cada número representa um negócio transformado e um empresário satisfeito.</p>
-      </div>
-      <div class="results-grid">
-        <div class="result-card aos aos-delay-1">
-          <div class="result-num"><sup>+</sup><span class="counter" data-target="50">0</span></div>
-          <div class="result-label">Clientes Ativos</div>
-        </div>
-        <div class="result-card aos aos-delay-2">
-          <div class="result-num"><span class="counter" data-target="5" data-suffix="x">0</span></div>
-          <div class="result-label">ROAS Médio das Campanhas</div>
-        </div>
-        <div class="result-card aos aos-delay-3">
-          <div class="result-num"><sup>+</sup><span class="counter" data-target="100">0</span></div>
-          <div class="result-label">Projetos Entregues</div>
-        </div>
-        <div class="result-card aos aos-delay-4">
-          <div class="result-num"><span class="counter" data-target="98" data-suffix="%">0</span></div>
-          <div class="result-label">Taxa de Satisfação</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ============================================================
        SECTION: CLIENTES QUE CONFIARAM
@@ -2080,16 +1583,14 @@
             <li><a href="#services">Social Media</a></li>
             <li><a href="#services">Designer</a></li>
             <li><a href="#services">Edição de Vídeo</a></li>
-            <li><a href="#services">Landing Page</a></li>
+            <li><a href="#services">Website</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Contato</h4>
           <ul class="footer-links">
             <li><a href="https://wa.me/5521990023321" target="_blank">WhatsApp</a></li>
-            <li><a href="#mentoria">Mentoria Subido PRO</a></li>
-            <li><a href="#about">Quem Somos</a></li>
-            <li><a href="#results">Resultados</a></li>
+            <li><a href="#clientes">Clientes</a></li>
             <li><a href="#contato">Contato</a></li>
           </ul>
         </div>
@@ -2135,33 +1636,6 @@
       });
     }, { threshold: 0.12 });
     aosEls.forEach(el => observer.observe(el));
-
-    // ---- Counter animation ----
-    function animateCounter(el) {
-      const target = parseInt(el.dataset.target, 10);
-      const suffix = el.dataset.suffix || '';
-      const duration = 1800;
-      const start = performance.now();
-      function step(now) {
-        const elapsed = now - start;
-        const progress = Math.min(elapsed / duration, 1);
-        const eased = 1 - Math.pow(1 - progress, 3);
-        el.textContent = Math.floor(eased * target) + suffix;
-        if (progress < 1) requestAnimationFrame(step);
-        else el.textContent = target + suffix;
-      }
-      requestAnimationFrame(step);
-    }
-    const counterEls = document.querySelectorAll('.counter');
-    const counterObs = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          animateCounter(e.target);
-          counterObs.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    counterEls.forEach(el => counterObs.observe(el));
 
     // ---- Google Sheets endpoint (cole aqui a URL do Apps Script após configurar) ----
     const SHEETS_ENDPOINT   = 'https://script.google.com/macros/s/AKfycbxP4y61Id2GaGrC54ItTTGpBPI23Cps0TdfeBigfFIhGI-hOXyiweB9bJD4AaQWGjSjWQ/exec';
