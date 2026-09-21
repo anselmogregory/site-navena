@@ -8,7 +8,7 @@
 <meta name="description" content="Diagnóstico digital exclusivo da SS Importados: Instagram, bio, conteúdo, Meta Ads, WhatsApp e Google. Por Grégory Anselmo, Agência Navena.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,600..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#0B0B0D; --bg2:#121215; --surface:#18181C; --surface2:#131316;
@@ -55,6 +55,12 @@ header.top{position:sticky;top:0;z-index:50;background:rgba(10,10,12,.74);backdr
 .tag{font-family:'Archivo';font-weight:700;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#E8E1D6;border:1px solid var(--line2);border-radius:999px;padding:6px 12px}
 .hero .cta-lnk{display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-family:'Archivo';font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#fff;text-decoration:none}
 .hero .cta-lnk::before{content:"";width:34px;height:2px;background:var(--accent)}
+.marquee{border-block:1px solid var(--line);padding:20px 0;overflow:hidden;background:var(--bg2)}
+.mq-track{display:flex;width:max-content;animation:mq 40s linear infinite}
+.marquee:hover .mq-track{animation-play-state:paused}
+.mq-item{font-family:'Archivo',sans-serif;font-weight:900;font-stretch:118%;font-size:clamp(20px,3.6vw,34px);letter-spacing:-.02em;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.22);padding:0 24px;white-space:nowrap}
+.mq-item.f{color:#3A5BFF;-webkit-text-stroke:0}
+@keyframes mq{to{transform:translate3d(-50%,0,0)}}
 section{padding:56px 0;scroll-margin-top:70px}
 .h2{font-weight:900;font-size:clamp(30px,5vw,46px);line-height:1.04;margin-bottom:14px;font-family:'Archivo';letter-spacing:-.02em;text-wrap:balance}
 .h2 .b{color:var(--accent)}
@@ -164,7 +170,7 @@ footer{border-top:1px solid var(--line);text-align:center;padding:30px 22px 90px
 @media(max-width:900px){.top nav{display:none}}
 @media(max-width:820px){.bios{grid-template-columns:1fr}.person{grid-template-columns:1fr}.person .photo{max-width:320px}.big3{grid-template-columns:1fr}.clients{grid-template-columns:repeat(3,1fr)}.stats{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:520px){.wrap{padding:0 16px}.method{padding:26px}.rcard{flex-basis:82vw}.clients{grid-template-columns:repeat(2,1fr)}}
-@media(prefers-reduced-motion:reduce){.reveal{transition:none}.js .reveal:not(.in){opacity:1;transform:none}}
+@media(prefers-reduced-motion:reduce){.mq-track{animation:none}.reveal{transition:none}.js .reveal:not(.in){opacity:1;transform:none}}
 </style>
 <script>document.documentElement.classList.add('js')</script>
 </head>
@@ -189,6 +195,8 @@ footer{border-top:1px solid var(--line);text-align:center;padding:30px 22px 90px
     <a class="cta-lnk" href="#s1">Ver diagnóstico</a>
   </section>
 </div>
+
+<div class="marquee" aria-hidden="true"><div class="mq-track"><span class="mq-item">Tráfego pago</span><span class="mq-item f">·</span><span class="mq-item">Meta Ads</span><span class="mq-item f">·</span><span class="mq-item">Treinamento comercial</span><span class="mq-item f">·</span><span class="mq-item">Google Ads</span><span class="mq-item f">·</span><span class="mq-item">Estratégia</span><span class="mq-item f">·</span><span class="mq-item">Site</span><span class="mq-item f">·</span><span class="mq-item">Social Media</span><span class="mq-item f">·</span><span class="mq-item">ID Visual</span><span class="mq-item f">·</span><span class="mq-item">Escala</span><span class="mq-item f">·</span><span class="mq-item">Tráfego pago</span><span class="mq-item f">·</span><span class="mq-item">Meta Ads</span><span class="mq-item f">·</span><span class="mq-item">Treinamento comercial</span><span class="mq-item f">·</span><span class="mq-item">Google Ads</span><span class="mq-item f">·</span><span class="mq-item">Estratégia</span><span class="mq-item f">·</span><span class="mq-item">Site</span><span class="mq-item f">·</span><span class="mq-item">Social Media</span><span class="mq-item f">·</span><span class="mq-item">ID Visual</span><span class="mq-item f">·</span><span class="mq-item">Escala</span><span class="mq-item f">·</span><span class="mq-item">Tráfego pago</span><span class="mq-item f">·</span><span class="mq-item">Meta Ads</span><span class="mq-item f">·</span><span class="mq-item">Treinamento comercial</span><span class="mq-item f">·</span><span class="mq-item">Google Ads</span><span class="mq-item f">·</span><span class="mq-item">Estratégia</span><span class="mq-item f">·</span><span class="mq-item">Site</span><span class="mq-item f">·</span><span class="mq-item">Social Media</span><span class="mq-item f">·</span><span class="mq-item">ID Visual</span><span class="mq-item f">·</span><span class="mq-item">Escala</span><span class="mq-item f">·</span><span class="mq-item">Tráfego pago</span><span class="mq-item f">·</span><span class="mq-item">Meta Ads</span><span class="mq-item f">·</span><span class="mq-item">Treinamento comercial</span><span class="mq-item f">·</span><span class="mq-item">Google Ads</span><span class="mq-item f">·</span><span class="mq-item">Estratégia</span><span class="mq-item f">·</span><span class="mq-item">Site</span><span class="mq-item f">·</span><span class="mq-item">Social Media</span><span class="mq-item f">·</span><span class="mq-item">ID Visual</span><span class="mq-item f">·</span><span class="mq-item">Escala</span><span class="mq-item f">·</span></div></div>
 
 <div class="wrap"><section class="reveal blue">
   <div class="sec-num">Quem preparou</div>
